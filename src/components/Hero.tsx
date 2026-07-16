@@ -1,6 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import Embers from './Embers'
+import Code3Tek from './Code3Tek'
 
 export default function Hero() {
   const reduced = useReducedMotion()
@@ -44,6 +45,8 @@ export default function Hero() {
         <motion.p {...stagger(0)} className="eyebrow mb-5 flex items-center gap-3">
           <span className="blip" />
           Promotional prep system — Company Officer track
+          <span className="text-silver/70">· by</span>
+          <Code3Tek className="text-[0.72rem]" />
         </motion.p>
         <motion.h1
           {...stagger(1)}

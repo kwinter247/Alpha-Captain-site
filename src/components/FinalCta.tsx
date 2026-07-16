@@ -1,5 +1,6 @@
 import Reveal from './Reveal'
 import Embers from './Embers'
+import Code3Tek from './Code3Tek'
 
 export default function FinalCta() {
   return (
@@ -35,7 +36,7 @@ export default function FinalCta() {
         <Reveal delay={0.3}>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="mailto:tektrader247@gmail.com?subject=Alpha%20Captain%20early%20access"
+              href="mailto:Kyle@code3tek.com?subject=Alpha%20Captain%20early%20access"
               className="bg-captain px-8 py-4 font-mono text-[0.8rem] tracking-[0.22em] uppercase text-off shadow-[0_0_36px_rgba(157,5,5,0.55)] transition-all hover:bg-flare hover:shadow-[0_0_52px_rgba(227,43,43,0.6)]"
             >
               Request early access
@@ -43,6 +44,9 @@ export default function FinalCta() {
           </div>
           <p className="mt-5 font-mono text-[0.68rem] tracking-[0.24em] uppercase text-silver/60">
             iOS &amp; Android — coming soon
+          </p>
+          <p className="mt-8 font-mono text-[0.68rem] tracking-[0.18em] uppercase text-silver/60">
+            A <Code3Tek className="text-[0.7rem]" /> build — tools for the front line.
           </p>
         </Reveal>
       </div>

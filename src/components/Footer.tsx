@@ -1,3 +1,5 @@
+import Code3Tek from './Code3Tek'
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-ink">
@@ -23,7 +25,7 @@ export default function Footer() {
           ))}
         </nav>
         <p className="font-mono text-[0.65rem] tracking-[0.18em] uppercase text-silver/50">
-          © {new Date().getFullYear()} Alpha Captain
+          © {new Date().getFullYear()} <Code3Tek className="text-[0.68rem] text-silver" /> LLC
         </p>
       </div>
     </footer>
