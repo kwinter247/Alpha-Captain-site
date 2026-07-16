@@ -46,7 +46,7 @@ export default function FinalCta() {
             iOS &amp; Android — coming soon
           </p>
           <p className="mt-8 font-mono text-[0.68rem] tracking-[0.18em] uppercase text-silver/60">
-            A <Code3Tek className="text-[0.7rem]" /> build — tools for the front line.
+            A <Code3Tek className="text-[0.7rem]" /> build — modern tools for the front line.
           </p>
         </Reveal>
       </div>
