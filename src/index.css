@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/inter';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+@theme {
+  --color-ink: #050505;
+  --color-charcoal: #151515;
+  --color-gunmetal: #2b2d2f;
+  --color-captain: #9d0505;
+  --color-deepred: #650000;
+  --color-flare: #e32b2b;
+  --color-silver: #b8b9bb;
+  --color-bright: #e4e5e6;
+  --color-off: #f8f9fa;
+
+  --font-display: 'Archivo Variable', 'Arial Black', sans-serif;
+  --font-body: 'Inter Variable', Inter, Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-silver);
+  background: var(--color-ink);
+  overflow-x: hidden;
+}
+
+/* Wide, geometric, bold uppercase — matches the wordmark */
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 125;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  color: var(--color-off);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-flare);
+}
+
+/* Dispatch-style blinking status dot */
+.blip {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--color-flare);
+  box-shadow: 0 0 8px 2px rgb(227 43 43 / 0.55);
+  animation: blip 1.6s ease-in-out infinite;
+}
+@keyframes blip {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+/* Marquee strip */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .blip { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+::selection {
+  background: var(--color-captain);
+  color: var(--color-off);
+}
