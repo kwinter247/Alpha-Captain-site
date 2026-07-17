@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Deploy (config is machine-local; backups and payloads never ship)
+scripts/deploy.env
+.deploy-backups/
+.deploy-payload.tar.gz
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
