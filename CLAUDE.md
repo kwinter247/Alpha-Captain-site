@@ -7,8 +7,12 @@ stack and brand tokens.
 
 ## Git rules (Kyle's standing law)
 
-- Kyle commits manually. NEVER auto-commit or push unless explicitly told.
-- When asked to commit: `git status` first, individual `git add` per file,
+- Kyle NEVER runs git himself. Claude runs the whole sequence with its own
+  tools. Do not hand Kyle commands to paste. ("Kyle commits manually" appeared
+  here until 2026-08-31 and was WRONG - it made sessions stall waiting on him.)
+- Do not commit or push unprompted. Wait until Kyle asks, approves, or calls
+  `/wrap` at the end of a session - `/wrap` IS the explicit commit order.
+- Sequence when told: `git status` first, individual `git add` per file,
   `git status` again, commit, push, `git log --oneline -3` to verify.
 - PowerShell 5.1 word-splits here-strings passed to `git commit -m @'...'@`.
   Write the message to a temp file and `git commit -F <file>` instead.
@@ -46,6 +50,11 @@ manual upload step.
   Medic's staging site.
 
 ## Hosting / DNS history (2026-07-16 switch)
+
+The generalised procedure lives in the shared playbook
+`C:\Users\KyleW\code-3-tek\HOSTING-PLAYBOOK.md` - this section is the Alpha
+Captain instance of it, and was the source it was written from. When the
+process changes, update the playbook too, not just this file.
 
 alphacaptain.app was a never-published Hostinger Website Builder site. It
 was deleted (mailbox checkbox left UNCHECKED — live Hostinger mailboxes
